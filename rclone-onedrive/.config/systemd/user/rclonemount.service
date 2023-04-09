@@ -1,0 +1,14 @@
+[Unit]
+Description= GMU OneDrive Mounting Service
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+TimeoutStartSec=10
+WorkingDirectory=%h
+RemainAfterExit=yes
+ExecStart=/usr/bin/rclone mount onedrive-gmu: %h/onedrive --config /home/pranav/.config/rclone/rclone.conf --vfs-cache-mode writes
+ExecStop=/bin/fusermount -u %h/onedrive
+
+[Install]
+WantedBy=default.target
