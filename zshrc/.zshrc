@@ -102,6 +102,7 @@ alias frcd="cd $HOME/frappe/frappe-bench && source $HOME/frappe/frappe-bench/env
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="$EDITOR ~/.oh-my-zsh"
 alias emacs="emacsclient -t"
+alias ff="firefox"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
