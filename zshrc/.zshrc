@@ -100,6 +100,7 @@ fi
 alias vim=nvim
 alias frcd="cd $HOME/frappe/frappe-bench && source $HOME/frappe/frappe-bench/env/bin/activate"
 alias zshconfig="vim ~/.zshrc"
+alias zzz="source ~/.zshrc"
 alias ohmyzsh="$EDITOR ~/.oh-my-zsh"
 alias emacs="emacsclient -t"
 alias ff="firefox"
