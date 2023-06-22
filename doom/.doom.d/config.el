@@ -44,7 +44,7 @@
 (setq org-directory "~/Dropbox/org/")
 (after! org
   (setq org-todo-keywords
-        (quote ((sequence "TODO(t)" "NEXT(n)" "STARTED(s)" "|" "DONE(d!)")
+        (quote ((sequence "IDEA(t)" "TODO(t)" "NEXT(n)" "STARTED(s)" "|" "DONE(d!)")
                 (sequence "WAITING(w@/!)" "HOLD(h@/!)" "|" "DNF(f@/!)""CANCELLED(c@/!)"))))
   (setq org-default-notes-file (convert-standard-filename "~/Dropbox/org/refile.org"))
   (setq +org-capture-notes-file (convert-standard-filename "~/Dropbox/org/refile.org"))
@@ -70,13 +70,18 @@
           ("wtm" "Game to play"     entry (file+headline "watchlist.org" "Games")    "* TODO %?\n" )
           ;; Add done item to watchlist, asks for rating and
           ("wd" "watched/read/played")
-          ("wdm" "Movie watched"   entry (file+headline "watchlist.org" "Movies")   "* TODO %^{Title} \n %^{rating}p \n:Review:\n%?\n:END:" )
-          ("wdb" "Book read"       entry (file+headline "watchlist.org" "Books")    "* TODO %^{Title} \n %^{rating}p \n%?" )
-          ("wdm" "TV Show watched" entry (file+headline "watchlist.org" "TV Shows") "* TODO %^{Title} \n %^{rating}p \n%?" )
-          ("wdm" "Game played"     entry (file+headline "watchlist.org" "Games")    "* TODO %^{Title} \n %^{rating}p \n%?" )
+          ("wdm" "Movie watched"   entry (file+headline "watchlist.org" "Movies")   "* DONE %^{Title} \n %^{rating}p \n:Review:\n%?\n:END:\n" )
+          ("wdb" "Book read"       entry (file+headline "watchlist.org" "Books")    "* DONE %^{Title} \n %^{rating}p \n%?" )
+          ("wdm" "TV Show watched" entry (file+headline "watchlist.org" "TV Shows") "* DONE %^{Title} \n %^{rating}p \n%?" )
+          ("wdm" "Game played"     entry (file+headline "watchlist.org" "Games")    "* DONE %^{Title} \n %^{rating}p \n%?" )
 
           )
-  ))
+  )
+  (setq org-agenda-custom-commands
+        '(("w" tags "+watchlist")
+          ;; add saved searches here
+          ))
+)
 
 ;; CC Clang setup
 (after! lsp-clangd
