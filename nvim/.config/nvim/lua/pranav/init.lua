@@ -1,6 +1,7 @@
 require("pranav.remap")
 require("pranav.set")
 
+-- theme setup, possibly move to after/plugins directory
 require("gruvbox").setup({
   undercurl = false,
   underline = true,
