@@ -44,7 +44,7 @@
 (setq org-directory "~/Dropbox/org/")
 (after! org
   (setq org-todo-keywords
-        (quote ((sequence "IDEA(t)" "TODO(t)" "NEXT(n)" "STARTED(s)" "|" "DONE(d!)")
+        (quote ((sequence  "TODO(t)" "NEXT(n)" "STARTED(s)" "|" "DONE(d!)")
                 (sequence "WAITING(w@/!)" "HOLD(h@/!)" "|" "DNF(f@/!)""CANCELLED(c@/!)"))))
   (setq org-default-notes-file (convert-standard-filename "~/Dropbox/org/refile.org"))
   (setq +org-capture-notes-file (convert-standard-filename "~/Dropbox/org/refile.org"))
