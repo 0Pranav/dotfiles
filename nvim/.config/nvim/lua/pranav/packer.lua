@@ -22,10 +22,15 @@ return require('packer').startup(function(use)
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
+
+    -- oil. still deciding wether to keep this
     use {
         'stevearc/oil.nvim',
         config = function() require('oil').setup() end
     }
+
+    -- terminal helper
+    use { "NvChad/nvterm" }
 
     -- ~projectile
     use {
