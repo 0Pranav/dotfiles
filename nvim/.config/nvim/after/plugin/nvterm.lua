@@ -11,3 +11,7 @@ require("nvterm").setup({
         },
     }
 })
+
+vim.keymap.set("n", "<leader>th", function() require("nvterm.terminal").toggle('horizontal') end, { desc = "Open parent directory" })
+vim.keymap.set("n", "<leader>tv", function() require("nvterm.terminal").toggle('vertical') end, { desc = "Open parent directory" })
+vim.keymap.set("n", "<leader>tf", function() require("nvterm.terminal").toggle('float') end, { desc = "Open parent directory" })
