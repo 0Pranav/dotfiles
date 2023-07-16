@@ -12,6 +12,13 @@ require("nvterm").setup({
     }
 })
 
-vim.keymap.set("n", "<leader>th", function() require("nvterm.terminal").toggle('horizontal') end, { desc = "Open parent directory" })
-vim.keymap.set("n", "<leader>tv", function() require("nvterm.terminal").toggle('vertical') end, { desc = "Open parent directory" })
-vim.keymap.set("n", "<leader>tf", function() require("nvterm.terminal").toggle('float') end, { desc = "Open parent directory" })
+local wk = require("which-key")
+
+wk.register({
+    t = {
+        name= "terminal",
+        h = { function() require("nvterm.terminal").toggle('horizontal') end ,"Horizontal Terminal"},
+        v = { function() require("nvterm.terminal").toggle('vertical') end ,"Vertical Terminal"},
+        f = { function() require("nvterm.terminal").toggle('float') end ,"Floating Terminal"},
+    }
+}, { prefix = "<leader>" })
