@@ -6,9 +6,9 @@ wk.register({
         name = "projects",
         v = { function()
             require("oil").open()
-        end, "Open parent directory" },
+        end, "Open directory" },
     }
-})
+}, { prefix = "<leader>" })
 
 -- make sure the cursor stays in the middle of the screen when jumping half pages
 vim.keymap.set("n", "<C-d>", "<C-d>zz")

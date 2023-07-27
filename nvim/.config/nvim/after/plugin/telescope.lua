@@ -11,9 +11,9 @@ wk.register({
   f = {
     name = "file", -- optional group name
     f = { "<cmd>Telescope find_files<cr>", "Find File" }, -- create a binding with label
-    r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File"}, -- additional options for creating the keymap
-    g = { "<cmd>Telescope git_files<cr>", "Open Recent File"}, -- additional options for creating the keymap
-    G = { "<cmd>Telescope grep_string<cr>", "Open Recent File"}, -- additional options for creating the keymap
+    r = { "<cmd>Telescope oldfiles<cr>", "Open Recent Files"}, -- additional options for creating the keymap
+    g = { "<cmd>Telescope git_files<cr>", "Open Git Files"}, -- additional options for creating the keymap
+    G = { "<cmd>Telescope grep_string<cr>", "Search for word"}, -- additional options for creating the keymap
   },
   p = {
       name="projects",
