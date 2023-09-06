@@ -59,7 +59,6 @@
         `(("t" "Todos") ;; Todos for different situations
           ("tq" "Quick Todo" entry (file+headline "refile.org" "Todos") "* TODO %?\n") ;; Quickly add a todo to refile later
           ("tp" "Personal Todo" entry (file+headline "life.org" "Todos") "* TODO %?\n SCHEDULED: %^t") ;; Add a todo to life.org, prompts for scheduled time
-          ("tr" "Research Todo" entry (file+headline "research.org" "Todos" "* TODO %?\n SCHEDULED: %^t\n DEADLINE: %^t\n")) ;; Add to do for research project, prompts for both scheduled time and deadline
           ;; Watch list management
           ("w" "Watchlist Item")
           ;; Add new item to watchlist
@@ -78,7 +77,8 @@
           )
   )
   (setq org-agenda-custom-commands
-        '(("w" tags "+watchlist")
+        '(("w" "Current Watchlist" tags"+watchlist+TODO=\"STARTED\""
+           )
           ;; add saved searches here
           ))
 )
