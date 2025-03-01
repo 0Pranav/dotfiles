@@ -1,1 +1,1 @@
-require("pranav")
+require("config.lazy")

@@ -124,5 +124,3 @@ esac
 
 export PATH=$PATH:/home/pranav/.spicetify
 export PATH=$PATH:~/bin
-export GOPATH=$(go env GOPATH)
-export PATH=$PATH:$GOPATH/bin
